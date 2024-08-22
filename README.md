@@ -23,7 +23,7 @@ This file requires [Node.js](https://nodejs.org/en/download/prebuilt-installer) 
 
 ## <a name="Usage"></a>Usage
 
-[![demonstration video]('./assets/video/demo.webg')]
+<video src="assets\video\README_Generator_demo.mp4" width="320" height="240" controls></video>
 
 To use, open a CLI of your choosing, navigate to the folder containing index.js and run:
 ```node index.js```
