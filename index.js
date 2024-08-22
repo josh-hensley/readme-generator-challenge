@@ -62,10 +62,16 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'questions',
-        message:'Questions',
-        default: ''
+        name: 'email',
+        message:'Email',
+        default: 'me@joshhensley.com'
     },
+    {
+        type: 'input',
+        name: 'username',
+        message:'Github Username',
+        default: 'josh-hensley'
+    }
 ];
 
 // TODO: Create a function to write README file
