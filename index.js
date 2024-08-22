@@ -18,10 +18,9 @@ const questions = [
     },
     {
         type: 'Input',
-        name: 'Table of Contents',
+        name: 'tableOfContents',
         message:'Table of Contents',
-        default: `
-        [Installation](#Installation)
+        default: `[Installation](#Installation)
         [Usage](#Usage)
         [License](#License)
         [Contributing](#Contributing)
@@ -45,8 +44,8 @@ const questions = [
         type: 'list',
         name: 'License',
         message:'License',
-        choices:['MIT', 'GPL' ,'LGPL' ,'Apache', 'MPL', 'BSD', 'Creative Commons'],
-        default: 'MIT'
+        choices:['', 'MIT', 'GPL' ,'LGPL' ,'Apache', 'MPL', 'BSD', 'Creative Commons'],
+        default: ''
     },
     {
         type: 'input',
@@ -75,9 +74,9 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    let answers;
-    inquirer.prompt(questions, answers);
-    console.log(answers);
+    console.log("README generator.");
+    let data = inquirer.prompt(questions);
+    data.then(value => console.log(value));
 }
 
 // Function call to initialize app
