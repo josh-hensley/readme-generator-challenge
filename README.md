@@ -19,7 +19,7 @@ This is a command line application used to quickly generate a professional quali
 
 ## <a name="Installation"></a>Installation
 
-This file requires [Node.js](https://nodejs.org/en/download/prebuilt-installer) and [inquirer](https://www.npmjs.com/package/inquirer) to run.  To install, download the project as a zip and extract to a folder of your choosing.
+This file requires [Node.js](https://nodejs.org/en/download/prebuilt-installer) and [inquirer](https://www.npmjs.com/package/inquirer) to run.  To install, download the project as a zip and extract to a folder of your choosing. Then using a CLI, navigate to the folder you extracted to and run ```npm install inquirer```.
 
 ## <a name="Usage"></a>Usage
 

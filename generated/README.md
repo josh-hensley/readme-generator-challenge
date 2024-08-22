@@ -4,7 +4,7 @@
 
 ## Description
 
-Let's write a long description shall we?  Firstly, the keyboard, you know... the thing that sits in front of you while you write at the computer? Well you're gonna want to use that... Use it until you've filled more than one line.  Okay, now things are getting a little wierd.  the cursor is misaligned and it's making things a little hard to see.  The cursor just misaligned itself again.
+Describe your application
 
 ## Table of Contents
 
