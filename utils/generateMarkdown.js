@@ -35,8 +35,10 @@ function generateMarkdown(data) {
   ${data.description}
   ## Table of Contents
   ${data.tableOfContents}
-  ## Installation
+  ## <a name="Installation">Installation</a>
   ${data.installation}
+  ## <a name="Usage">Usage</a>
+  ${data.usage}
 `;
 }
 
