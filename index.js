@@ -21,13 +21,14 @@ const questions = [
         type: 'Input',
         name: 'tableOfContents',
         message:'Table of Contents',
-        default: `[Installation](#Installation)
-        [Usage](#Usage)
-        [License](#License)
-        [Contributing](#Contributing)
-        [Tests](#Tests)
-        [Questions](#Questions)
-        `
+        default: `
+-[Installation](#Installation)
+-[Usage](#Usage)
+-[License](#License)
+-[Contributing](#Contributing)
+-[Tests](#Tests)
+-[Questions](#Questions)
+ `
     },
     {
         type: 'input',

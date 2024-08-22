@@ -46,6 +46,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   let section = `##<a name="license">License</a>
+
   `;
   if (license === "MIT"){
     section += `[MIT]${renderLicenseLink}${renderLicenseBadge}`;
@@ -64,28 +65,42 @@ function renderLicenseSection(license) {
   } else {
     return "";
   }
-
+  return section;
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 ## Description
+
 ${renderLicenseBadge(data.license)}
 ${data.description}
+
 ## Table of Contents
+
 ${data.tableOfContents}
-## <a name="Installation">Installation</a>
+
+## <a name="Installation"></a>Installation
+
 ${data.installation}
-## <a name="Usage">Usage</a>
+
+## <a name="Usage"></a>Usage
+
 ${data.usage}
+
 ${renderLicenseSection(data.license)}
-## <a name="contributing">Contributing</a>
+
+## <a name="contributing"></a>Contributing
+
 ${data.contributing}
-## <a name="tests">Tests</a>
+
+## <a name="tests"></a>Tests
+
 ${data.tests}
-## <a name="questions">Questions</a>
-If you have questions you can reach me at ${data.email} or add me on [Github](github.com/${data.username})
+
+## <a name="questions"></a>Questions
+
+If you have questions you can reach me at ${data.email} or add me on [Github](github.com/${data.username}).
 `;
 }
 
