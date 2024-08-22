@@ -23,7 +23,7 @@ This file requires [Node.js](https://nodejs.org/en/download/prebuilt-installer) 
 
 ## <a name="Usage"></a>Usage
 
-<video src="assets\video\README_Generator_demo.mp4" width="320" height="240" controls></video>
+https://github.com/user-attachments/assets/c514f15e-f67c-4d73-a595-6200d03a1e2e
 
 To use, open a CLI of your choosing, navigate to the folder containing index.js and run:
 ```node index.js```
