@@ -45,25 +45,25 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  let section = `##<a name="license">License</a>
+  let section = `## <a name="license"></a>License
 
   `;
   if (license === "MIT"){
-    section += `[MIT]${renderLicenseLink}${renderLicenseBadge}`;
+    section += `[MIT]${renderLicenseLink(license)}`;
   } else if (license === "GPL"){
-    section += `[GPL]${renderLicenseLink}${renderLicenseBadge}`;
+    section += `[GPL]${renderLicenseLink(license)}`;
   } else if (license === "LGPL"){
-    section += `[LGPL]${renderLicenseLink}${renderLicenseBadge}`;
+    section += `[LGPL]${renderLicenseLink(license)}`;
   } else if (license === "Apache"){
-    section += `[Apache]${renderLicenseLink}${renderLicenseBadge}`;
+    section += `[Apache]${renderLicenseLink(license)}`;
   } else if (license ==="MPL"){
-    section += `[MPL]${renderLicenseLink}${renderLicenseBadge}`;
+    section += `[MPL]${renderLicenseLink(license)}`;
   } else if (license === "BSD"){
-    section += `[BSD]${renderLicenseLink}${renderLicenseBadge}`;
+    section += `[BSD]${renderLicenseLink(license)}`;
   } else if (license === "Creative Commons"){
-    section += `[Creative Commons]${renderLicenseLink}${renderLicenseBadge}`;
+    section += `[Creative Commons]${renderLicenseLink(license)}`;
   } else {
-    return "";
+    section = "";
   }
   return section;
 }
@@ -71,9 +71,11 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-## Description
 
 ${renderLicenseBadge(data.license)}
+
+## Description
+
 ${data.description}
 
 ## Table of Contents

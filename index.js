@@ -9,57 +9,57 @@ const questions = [
         type: 'input',
         name: 'title',
         message: 'Title',
-        default: ''
+        default: 'This is a Title'
     },
     {
         type: 'input',
         name: 'description',
         message:'Description',
-        default: ''
+        default: 'This is a description'
     },
     {
         type: 'Input',
         name: 'tableOfContents',
         message:'Table of Contents',
         default: `
--[Installation](#Installation)
--[Usage](#Usage)
--[License](#License)
--[Contributing](#Contributing)
--[Tests](#Tests)
--[Questions](#Questions)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Contributing](#Contributing)
+* [Tests](#Tests)
+* [Questions](#Questions)
  `
     },
     {
         type: 'input',
         name: 'installation',
         message:'Installation',
-        default: ''
+        default: 'This is how to install'
     },
     {
         type: 'input',
         name: 'usage',
         message:'Usage',
-        default: ''
+        default: 'This is how to use'
     },
     {
         type: 'list',
         name: 'license',
         message:'License',
         choices:['', 'MIT', 'GPL' ,'LGPL' ,'Apache', 'MPL', 'BSD', 'Creative Commons'],
-        default: ''
+        default: 'MIT'
     },
     {
         type: 'input',
         name: 'contributing',
         message:'Contributing',
-        default: ''
+        default: 'This is how to contribute'
     },
     {
         type: 'input',
         name: 'tests',
         message:'Tests',
-        default: ''
+        default: 'These are some tests'
     },
     {
         type: 'input',
