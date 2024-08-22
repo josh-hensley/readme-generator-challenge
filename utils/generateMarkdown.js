@@ -102,7 +102,7 @@ ${data.tests}
 
 ## <a name="questions"></a>Questions
 
-If you have questions you can reach me at ${data.email} or add me on [Github](github.com/${data.username}).
+If you have questions you can reach me at ${data.email}. Add me on [Github](github.com/${data.username}).
 `;
 }
 

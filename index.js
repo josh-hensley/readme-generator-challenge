@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 import inquirer from "inquirer";
 import generateMarkdown from "./utils/generateMarkdown.js";
 import fs from "fs";
 
-// TODO: Create an array of questions for user input
+//  An array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -12,15 +12,15 @@ const questions = [
         default: 'This is a Title'
     },
     {
-        type: 'input',
+        type: 'editor',
         name: 'description',
         message:'Description',
-        default: 'This is a description'
+        default: 'Describe your application'
     },
     {
-        type: 'Input',
+        type: 'input',
         name: 'tableOfContents',
-        message:'Table of Contents',
+        message:'Table of Contents (use default, if no changes are to be made.)',
         default: `
 * [Installation](#Installation)
 * [Usage](#Usage)
@@ -31,35 +31,35 @@ const questions = [
  `
     },
     {
-        type: 'input',
+        type: 'editor',
         name: 'installation',
         message:'Installation',
-        default: 'This is how to install'
+        default: 'Explain how to install.'
     },
     {
-        type: 'input',
+        type: 'editor',
         name: 'usage',
         message:'Usage',
-        default: 'This is how to use'
+        default: 'Explain how to use.'
     },
     {
         type: 'list',
         name: 'license',
-        message:'License',
+        message:'License (if none, select the blank option)',
         choices:['', 'MIT', 'GPL' ,'LGPL' ,'Apache', 'MPL', 'BSD', 'Creative Commons'],
         default: 'MIT'
     },
     {
-        type: 'input',
+        type: 'editor',
         name: 'contributing',
-        message:'Contributing',
-        default: 'This is how to contribute'
+        message:'Contributing (use default, unless you want to write your own guidelines)',
+        default: 'If you wish to contribute, please follow these [guidelines](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).'
     },
     {
-        type: 'input',
+        type: 'editor',
         name: 'tests',
         message:'Tests',
-        default: 'These are some tests'
+        default: 'Tests go in here.'
     },
     {
         type: 'input',
@@ -75,14 +75,20 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
+// Creates and writes README file.
 function writeToFile(fileName, data) {
     fs.writeFile(`./${fileName}`, data, err => console.error(err));
 }
 
-// TODO: Create a function to initialize app
+// Function that runs at start.
 function init() {
-    console.log("README generator.");
+    console.log(`
+=================================================================
+                        README generator
+=================================================================
+Some questions use your system's default text editor.  
+Write into the temp file, save, then close the editor to submit.
+=================================================================`);
     const data = inquirer.prompt(questions);
     data.then(d => {
         const md = generateMarkdown(d);
@@ -90,5 +96,4 @@ function init() {
     });
 }
 
-// Function call to initialize app
 init();
