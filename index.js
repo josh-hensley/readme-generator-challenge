@@ -65,30 +65,31 @@ const questions = [
         type: 'input',
         name: 'email',
         message:'Email',
-        default: 'me@joshhensley.com'
+        default: 'your email'
     },
     {
         type: 'input',
         name: 'username',
         message:'Github Username',
-        default: 'josh-hensley'
+        default: 'your github username'
     }
 ];
 
 // Creates and writes README file.
 function writeToFile(fileName, data) {
-    fs.writeFile(`./${fileName}`, data, err => console.error(err));
+    fs.writeFile(`./generated/${fileName}`, data, err => console.error(err));
 }
 
 // Function that runs at start.
 function init() {
     console.log(`
-=================================================================
-                        README generator
-=================================================================
-Some questions use your system's default text editor.  
-Write into the temp file, save, then close the editor to submit.
-=================================================================`);
+=====================================================================
+                          README generator
+=====================================================================
+Answer prompts.  Some prompts use your default text editor.  Write 
+submission into temp file, save, then exit to submit.  README will be
+generated and placed in "./generated" upon completion.
+=====================================================================`);
     const data = inquirer.prompt(questions);
     data.then(d => {
         const md = generateMarkdown(d);

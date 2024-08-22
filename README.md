@@ -23,9 +23,11 @@ This file requires [Node.js](https://nodejs.org/en/download/prebuilt-installer) 
 
 ## <a name="Usage"></a>Usage
 
+[![demonstration video]('./assets/video/demo.webg')]
+
 To use, open a CLI of your choosing, navigate to the folder containing index.js and run:
 ```node index.js```
-answer the prompts or hit enter to use default value. Once finished a README.md file will be generated and appear in your root directory.
+answer the prompts or hit enter to use default value. Once finished a README.md file will be generated and appear in your "generated" directory.
 
 ## <a name="license"></a>License
 
@@ -37,7 +39,7 @@ If you wish to contribute, please follow these [guidelines](https://www.contribu
 
 ## <a name="tests"></a>Tests
 
-If you want to quickly generate a scaffolding to fill in in another editor like notepad++ or vs code, run the app and spam the enter key until you have a README.md file.  It will be filled with default answers.
+If you want to quickly generate a scaffolding to fill in in another editor like notepad++ or vs code, run the app and spam the enter key until you have a README.md file in your generated folder.  It will be filled with default answers.
 
 ## <a name="questions"></a>Questions
 
