@@ -1,10 +1,10 @@
-# Title Oh, Title
+# This is a Title
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 
-Describe your application, here it is described... Described it is
+Describe your application
 
 ## Table of Contents
 
@@ -39,4 +39,4 @@ Tests go in here.
 
 ## <a name="questions"></a>Questions
 
-If you have questions you can reach me at me@joshensley.com. Add me on [Github](github.com/josh-hensley).
+If you have questions you can reach me at your email. Add me on [Github](github.com/your github username).
