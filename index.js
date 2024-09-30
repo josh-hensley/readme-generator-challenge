@@ -12,7 +12,7 @@ const questions = [
         default: 'This is a Title'
     },
     {
-        type: 'editor',
+        type: 'input',
         name: 'description',
         message:'Description',
         default: 'Describe your application'
@@ -31,13 +31,13 @@ const questions = [
  `
     },
     {
-        type: 'editor',
+        type: 'input',
         name: 'installation',
         message:'Installation',
         default: 'Explain how to install.'
     },
     {
-        type: 'editor',
+        type: 'input',
         name: 'usage',
         message:'Usage',
         default: 'Explain how to use.'
@@ -50,13 +50,13 @@ const questions = [
         default: 'MIT'
     },
     {
-        type: 'editor',
+        type: 'input',
         name: 'contributing',
         message:'Contributing (use default, unless you want to write your own guidelines)',
         default: 'If you wish to contribute, please follow these [guidelines](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).'
     },
     {
-        type: 'editor',
+        type: 'input',
         name: 'tests',
         message:'Tests',
         default: 'Tests go in here.'
