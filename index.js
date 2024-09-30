@@ -86,9 +86,8 @@ function init() {
 =====================================================================
                           README generator
 =====================================================================
-Answer prompts.  Some prompts use your default text editor.  Write 
-submission into temp file, save, then exit to submit.  README will be
-generated and placed in "./generated" upon completion.
+Answer prompts.  README will be generated and placed in "./generated" 
+upon completion.
 =====================================================================`);
     const data = inquirer.prompt(questions);
     data.then(d => {
