@@ -93,9 +93,7 @@ async function init() {
 =====================================================================
                           README generator
 =====================================================================
-Answer prompts.  README will be generated and placed in "./generated" 
-upon completion.
-=====================================================================`);
+`);
     const data = await inquirer.prompt(questions);
     writeToFile("README.md", generateMarkdown(data), data.path);
 }
