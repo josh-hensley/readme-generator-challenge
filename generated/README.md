@@ -39,4 +39,4 @@ Tests go in here.
 
 ## <a name="questions"></a>Questions
 
-If you have questions you can reach me at your email. Add me on [Github](github.com/your github username).
+If you have questions you can reach me at me@joshhensley.com. Add me on [Github](github.com/josh-hensley).

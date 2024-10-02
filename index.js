@@ -4,6 +4,7 @@ import generateMarkdown from "./utils/generateMarkdown.js";
 import fs from "fs";
 
 //  An array of questions for user input
+const dest = process.argv[2];
 const questions = [
     {
         type: 'input',
@@ -65,23 +66,29 @@ const questions = [
         type: 'input',
         name: 'email',
         message:'Email',
-        default: 'your email'
+        default: 'me@joshhensley.com'
     },
     {
         type: 'input',
         name: 'username',
         message:'Github Username',
-        default: 'your github username'
+        default: 'josh-hensley'
+    },
+    {
+        type: 'input',
+        name: 'path',
+        message:'What folder to save in?',
+        default: dest ? dest : 'generated/'
     }
 ];
 
 // Creates and writes README file.
-function writeToFile(fileName, data) {
-    fs.writeFile(`./generated/${fileName}`, data, err => console.error(err));
+function writeToFile(fileName, data, path) {
+    fs.writeFile(`${path}${fileName}`, data, err => err ? console.error(err) : console.log('Success!'));
 }
 
 // Function that runs at start.
-function init() {
+async function init() {
     console.log(`
 =====================================================================
                           README generator
@@ -89,11 +96,8 @@ function init() {
 Answer prompts.  README will be generated and placed in "./generated" 
 upon completion.
 =====================================================================`);
-    const data = inquirer.prompt(questions);
-    data.then(d => {
-        const md = generateMarkdown(d);
-        writeToFile("README.md", md);
-    });
+    const data = await inquirer.prompt(questions);
+    writeToFile("README.md", generateMarkdown(data), data.path);
 }
 
 init();
