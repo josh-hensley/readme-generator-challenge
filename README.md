@@ -26,7 +26,7 @@ This file requires [Node.js](https://nodejs.org/en/download/prebuilt-installer) 
 https://github.com/user-attachments/assets/c514f15e-f67c-4d73-a595-6200d03a1e2e
 
 To use, open a CLI of your choosing, navigate to the folder containing index.js and run:
-```node index.js```
+```npm start <optional destination path for generated README>```. 
 answer the prompts or hit enter to use default value. Once finished a README.md file will be generated and appear in your "generated" directory.
 
 ## <a name="license"></a>License
